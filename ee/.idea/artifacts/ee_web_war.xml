@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ee-web:war">
+    <output-path>$PROJECT_DIR$/ee-web/target</output-path>
+    <root id="archive" name="ee-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ee-web:war exploded" />
+    </root>
+  </artifact>
+</component>

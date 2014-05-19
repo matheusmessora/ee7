@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+        <h1>Doe Sangue!</h1>
+
+        <p>Faça o seu cadastro de doador.</p>
+
+        <h:form id="reg">
+            <h2>Cadastro Doador</h2>
+
+            <p>Salve vidas, doe sangue!</p>
+            <table>
+                <tr>
+                    <th>
+                        <h:outputLabel
+                                for="name" value="Nome:"/>
+                    </th>
+                    <td>
+                        <h:inputText id="name" value="#{newDoador.nome}"/>
+                        <h:message for="name" errorClass="invalid"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <h:outputLabel for="tipo" value="Tipo Sangue:"/>
+                    </th>
+                    <td>
+                        <h:selectOneMenu id="tipo" value="#{newDoador.tipoSangue}">
+                            <f:selectItems value="#{doadorController.tipoSanguineoList}" var="t" itemValue="#{t}" itemLabel="#{t.label}" />
+                        </h:selectOneMenu>
+
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <h:commandButton id="cadastrar"
+                                 action="#{doadorController.cadastrar}" value="Cadastrar"/>
+                <h:outputText value="Cadastrado com sucesso!"
+                              rendered="#{facesContext.postback and empty facesContext.messageList}"
+                              style="color: green;"/>
+            </p>
+        </h:form>
+        <h2>Doadores</h2>
+        <h:panelGroup rendered="#{empty doadorList}">
+            <em>Sem doadores cadastrados</em>
+        </h:panelGroup>
+        <h:dataTable var="_doador" value="#{doadorList}"
+                     rendered="#{not empty doadorList}">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{_doador.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nome</f:facet>
+                #{_doador.nome}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Sangue</f:facet>
+                #{_doador.tipoSangue.label}
+            </h:column>
+            <!--<h:column>-->
+            <!--<f:facet name="header">REST URL</f:facet>-->
+            <!--<a href="#{request.contextPath}/rest/members/#{_member.id}">/rest/members/#{_member.id}</a>-->
+            <!--</h:column>-->
+            <!--<f:facet name="footer">-->
+            <!--REST URL for all members: <a-->
+            <!--href="#{request.contextPath}/rest/members">/rest/members</a>-->
+            <!--</f:facet>-->
+        </h:dataTable>
+    </ui:define>
+</ui:composition>
