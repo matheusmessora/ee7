@@ -62,14 +62,11 @@
                 <f:facet name="header">Sangue</f:facet>
                 #{_doador.tipoSangue.label}
             </h:column>
-            <!--<h:column>-->
-            <!--<f:facet name="header">REST URL</f:facet>-->
-            <!--<a href="#{request.contextPath}/rest/members/#{_member.id}">/rest/members/#{_member.id}</a>-->
-            <!--</h:column>-->
-            <!--<f:facet name="footer">-->
-            <!--REST URL for all members: <a-->
-            <!--href="#{request.contextPath}/rest/members">/rest/members</a>-->
-            <!--</f:facet>-->
+            <h:column>
+                <f:facet name="header">Edit</f:facet>
+                <!--<a href="#{request.contextPath}"></a>-->
+                #{_doador.tipoSangue.label}
+            </h:column>
         </h:dataTable>
     </ui:define>
 </ui:composition>
