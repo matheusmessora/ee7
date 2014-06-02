@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@NamedQuery(name = Doador.DOADOR_FIND_ALL, query = "SELECT d FROM Doador d")
+@NamedQuery(name = Doador.DOADOR_FIND_ALL, query = "SELECT d from Doador d")
 public class Doador {
 
     public static final String DOADOR_FIND_ALL = "Doador.findAll";

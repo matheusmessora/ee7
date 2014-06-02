@@ -2,6 +2,7 @@ package pognotfound.controller;
 
 import pognotfound.model.Doador;
 import pognotfound.model.TipoSanguineo;
+import pognotfound.queue.TesteQueueProducer;
 import pognotfound.service.DoadorService;
 
 import javax.annotation.PostConstruct;
@@ -26,6 +27,9 @@ public class DoadorController {
     @Inject
     private DoadorService service;
 
+    @Inject
+    private TesteQueueProducer producer;
+
     private Doador doador;
 
     @Produces
@@ -49,6 +53,7 @@ public class DoadorController {
     public void cadastrar() throws Exception {
         log.info("Registering " + doador);
         service.insert(doador);
+        producer.produz();
         initNewDoador();
     }
 
