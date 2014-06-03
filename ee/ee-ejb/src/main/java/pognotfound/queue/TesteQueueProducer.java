@@ -18,12 +18,13 @@ public class TesteQueueProducer {
     @Resource(mappedName = "java:jboss/exported/jms/queue/testQueue")
     private Queue queue;
 
+
     @Inject
     JMSContext context;
 
     public void produz() throws Exception {
         log.info(queue.getQueueName());
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1; i++) {
             context.createProducer().send(queue, "[\n" +
                     "    {\n" +
                     "        \"id\": 0,\n" +

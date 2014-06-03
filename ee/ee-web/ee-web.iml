@@ -22,6 +22,16 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:jsp-api:2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.4" level="project" />
     <orderEntry type="module" module-name="ee-ejb" scope="PROVIDED" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.infinispan:infinispan-cdi:6.0.2.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.infinispan:infinispan-core:6.0.2.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.infinispan:infinispan-commons:6.0.2.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.logging:jboss-logging:3.1.2.GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jgroups:jgroups:3.4.1.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.marshalling:jboss-marshalling-river:1.4.4.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.marshalling:jboss-marshalling:1.4.4.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.infinispan:infinispan-client-hotrod:6.0.2.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-pool:commons-pool:1.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_1.1_spec:1.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.enterprise:cdi-api:1.0-SP4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.1_spec:1.0.0.Final" level="project" />
